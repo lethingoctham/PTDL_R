@@ -14,15 +14,15 @@ ipod
 lists <- c()
 listss <- c()
 i <- 1
-# Lay mau có kich thuoc bang 25 lan (50 lan)
+# Lay mau cÃ³ kich thuoc bang 25 lan (50 lan)
 for (i in range(1:50)){
   lists <- sample(ipod, 25)
   listss[1:1000] <- c(lists)
   i <- i + 1
 }
 listss
-t <- data.frame(listss, header = TRUE)
-ggplot(t, aes(x=listss)) + 
+s <- data.frame(listss, header = TRUE)
+ggplot(s, aes(x=listss)) + 
   geom_histogram(binwidth = 1, boundary = 0.5, color = "black") +
   labs(x = "Do dai bai hat tinh bang phut",
        title = "Tan suat xuat hien cua cac bai hat co do dai tu 1 den 10 phut")
@@ -39,15 +39,15 @@ for (i in range(1:500)){
   i <- i + 1
 }
 listss1
-t1 <- data.frame(listss1, header = TRUE)
-ggplot(t1, aes(x=listss1)) + 
+s1 <- data.frame(listss1, header = TRUE)
+ggplot(s1, aes(x=listss1)) + 
   geom_histogram(binwidth = 1, boundary = 0.5, color = "black") +
   labs(x = "Do dai bai hat tinh bang phut",
        title = "Tan suat xuat hien cua cac bai hat co do dai tu 1 den 10 phut")
 # Xac suat xuat hien cua cac bai hat co do dai hon 6 phut
 1-pnorm(5, mean(listss1), sd(listss1))
 
-# Lay mau có kich thuoc bang 30 (30 lan)
+# Lay mau cÃ³ kich thuoc bang 30 (30 lan)
 lists2 <- c()
 listss2 <- c()
 for (i in range(1:30)){
@@ -56,8 +56,8 @@ for (i in range(1:30)){
   i <- i + 1
 }
 listss2
-t2 <- data.frame(listss2, header = TRUE)
-ggplot(t2, aes(x=listss2)) + 
+s2 <- data.frame(listss2, header = TRUE)
+ggplot(s2, aes(x=listss2)) + 
   geom_histogram(binwidth = 1, boundary = 0.5, color = "orange") +
   labs(x = "Do dai bai hat tinh bang phut",
        title = "Tan suat xuat hien cua cac bai hat co do dai tu 1 den 10 phut")
